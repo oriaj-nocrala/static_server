@@ -1,0 +1,24 @@
+[package]
+name = "static_server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+opt-level = 3
+lto = true
+debug = false
+debug-assertions = false
+overflow-checks = true
+codegen-units = 1
+panic = "abort"
+rpath = false
+debuginfo = 2
+incremental = false
+
+
+[dependencies]
+actix-files = "0.6.2"
+actix-rt = "2.8.0"
+actix-web = "4.3.0"
